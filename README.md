@@ -25,5 +25,5 @@ Question 1: Busiest Hours - What are the busiest hours of the day for taxi picku
 See the full visualization of the line chart of Yellow Taxi [Here](https://github.com/alifiaganjaraharja/NYC-TLC/blob/main/visualizations/%5BNYC%5D-BusiestHours-YellowTaxi.pdf)
 
 The pattern of demand shifts significantly:
-- **Weekdays** are dominated by the Evening Commute/Dinner time (6 PM - 8 PM), reflecting the typical rush of people leaving work and heading out.
-- **Weekends** show a peak at Midnight (hour 0), suggesting a stronger demand from Late Night/Nightlife activity. The weekday evening rush hours (6 PM - 7 PM) remain busy, but the overall highest volume shifts later into the night/early morning on weekends.
+- **Weekdays** are dominated by the Evening Commute/Dinner time (6 PM - 8 PM) with 72,575,146 total pickups, reflecting the typical rush of people leaving work and heading out.
+- **Weekends** show a peak at Midnight (hour 0) with 25,554,686 total pickups, suggesting a stronger demand from Late Night/Nightlife activity. The weekday evening rush hours (6 PM - 7 PM) remain busy, but the overall highest volume shifts later into the night/early morning on weekends.
