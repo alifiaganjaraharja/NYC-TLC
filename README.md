@@ -36,8 +36,9 @@ The overall change in pattern for green taxis is consistent** with the yellow ta
 
 Question 2: Popular Routes - What are the top 10 most common pick-up and drop-off location combinations?
 
-**FHV**
-For FHV, the analysis is only done for 2017 because the rest of the dataset doesn't contain any drop-off location ID. And important to note that the result of the analysis is based on 107,9m trips (56%) with complete location data. 
+- **FHV**
+  
+For FHV, the analysis is only done for 2017 because the rest of the dataset doesn't contain any drop-off location ID. And important to note that the result of the analysis is based on 107,9M trips (56%) with complete location data. 
 
 
 
