@@ -38,7 +38,7 @@ Question 2: Popular Routes - What are the top 10 most common pick-up and drop-of
 
 - **FHV**
   
-For FHV, the analysis is only done for 2017 because the rest of the dataset doesn't contain any drop-off location ID. And important to note that the result of the analysis is based on 107,9M trips (56%) with complete location data. 
+**NOTE**: For FHV, the analysis is only done for 2017 because the rest of the dataset doesn't contain any drop-off location ID. And the result of the analysis is based on 107,9M trips (56%) with complete location data. 
 
 
 
