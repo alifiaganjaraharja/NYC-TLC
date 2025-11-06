@@ -30,10 +30,15 @@ The pattern of demand shifts significantly:
 
 See the full visualization of the line chart of Green Taxi [here](https://github.com/alifiaganjaraharja/NYC-TLC/blob/main/visualizations/%5BNYC%5D-BusiestHours-GreenTaxi.pdf)
 
-The overall change in pattern for green taxis id **consistent** with the yellow taxi data, showing a clear shift from the commuting rush to nightlife demand:
+The overall change in pattern for green taxis is consistent** with the yellow taxi data, showing a clear shift from the commuting rush to nightlife demand:
 - **Weekday Peak** concentrated entirely in the Evening Commute period (5 PM TO 7 PM, with 6 PM being the busiest with 3,990,528 total pickups).
 - **Weekend Peak** Shifts to Midnight (hour 0) with 1,611,417 total pickups, with the late evening hours (6 PM and 7 PM) still maintaining high volume. The peak time itself moves later to capture people leaving social venues.
 
 Question 2: Popular Routes - What are the top 10 most common pick-up and drop-off location combinations?
+
+**FHV**
+For FHV, the analysis is only done for 2017 because the rest of the dataset doesn't contain any drop-off location ID. And important to note that the result of the analysis is based on 107,9m trips (56%) with complete location data. 
+
+
 
 
