@@ -52,9 +52,13 @@ The most popular green taxi routes are dominated by two major trip types: intra-
 
 - **Yellow Taxi**
 
-See the result table [here](
+See the result table [here](https://github.com/alifiaganjaraharja/NYC-TLC/blob/main/visualizations/%5BNYC%5D-PopularRoutes-YellowTaxi.pdf)
 
-The most popular yellow taxi routes are overwhelmingly dominated by trips within and between the Midtown and Downtown Manhattan business districts, with a key link to the Upper East/West Sides. In summary, the Yellow Taxi data confirms its role as a high-volume carrier primarily serving the most dense and wealthy commuter routes in the Manhattan
+The most popular yellow taxi routes are overwhelmingly dominated by trips within and between the Midtown and Downtown Manhattan business districts, with a key link to the Upper East/West Sides. In summary, the Yellow Taxi data confirms its role as a high-volume carrier primarily serving the most dense and wealthy commuter routes in the Manhattan core, a very different pattern than the FHV and Green Taxi fleets.
+
+Question 3: Trip Duration Analysis - How do trip duration and distance vary by time of day?
+
+
 
 
 
