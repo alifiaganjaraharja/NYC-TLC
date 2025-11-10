@@ -1,7 +1,7 @@
 # [TLC] - NYC Taxi Trip Analysis
 By Alifia Ganjaraharja
 
-This repository contains a data analysis project that utilizes SQL to examine taxi trip patterns to understand demand, pricing, and efficiency. This project utilizes a real public dataset that was recorded by the NYC Taxi & Limousine Commission (TLC), which is available on Google BigQuery.
+This repository contains a data analysis project that utilizes SQL to examine taxi trip patterns to understand demand, pricing, and efficiency. This project utilizes a real public dataset recorded by the NYC Taxi & Limousine Commission (TLC), which is available on Google BigQuery.
 
 ## Project Overview:
 This project utilizes a real public dataset from the NYC Taxi & Limousine Commission (TLC). It's ideal for practicing advanced SQL, including window functions and performance optimization on large datasets.
@@ -49,6 +49,12 @@ The most popular routes for For-Hire Vehicles are characterized by a strong conn
 See the result table [here](
 
 The most popular green taxi routes are dominated by two major trip types: intra-zone trips (trips starting and ending in the same neighborhood) and trips involving LaGuardia Airport (LGA).
+
+- **Yelloe Taxi**
+
+See the result table [here](
+
+
 
 
 
