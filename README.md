@@ -40,6 +40,16 @@ Question 2: Popular Routes - What are the top 10 most common pick-up and drop-of
   
 **NOTE**: For FHV, the analysis is only done for 2017 because the rest of the dataset doesn't contain any drop-off location ID. And the result of the analysis is based on 107,9M trips (56%) with complete location data. 
 
+See the result table [here](https://github.com/alifiaganjaraharja/NYC-TLC/blob/main/visualizations/%5BNYC%5D-PopularRoute-FHV.pdf)
+
+The most popular routes for For-Hire Vehicles are characterized by a strong connection to airports and frequent intra-neighborhood trips (trips starting and ending in the same zone). This analysis clearly demonstrates that FHV demand is split between high-volume, long-distance trips (especially to and from airports/regions) and high-frequency, short-distance trips within dense Manhattan and core neighborhood areas.
+
+- **Green Taxi**
+
+See the result table [here](
+
+The most popular green taxi routes are dominated by two major trip types: intra-zone trips (trips starting and ending in the same neighborhood) and trips involving LaGuardia Airport (LGA).
+
 
 
 
