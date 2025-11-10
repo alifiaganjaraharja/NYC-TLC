@@ -50,9 +50,11 @@ See the result table [here](https://github.com/alifiaganjaraharja/NYC-TLC/blob/m
 
 The most popular green taxi routes are dominated by two major trip types: intra-zone trips (trips starting and ending in the same neighborhood) and trips involving LaGuardia Airport (LGA).
 
-- **Yelloe Taxi**
+- **Yellow Taxi**
 
 See the result table [here](
+
+The most popular yellow taxi routes are overwhelmingly dominated by trips within and between the Midtown and Downtown Manhattan business districts, with a key link to the Upper East/West Sides. In summary, the Yellow Taxi data confirms its role as a high-volume carrier primarily serving the most dense and wealthy commuter routes in the Manhattan
 
 
 
