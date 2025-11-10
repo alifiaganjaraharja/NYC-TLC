@@ -58,6 +58,9 @@ The most popular yellow taxi routes are overwhelmingly dominated by trips within
 
 Question 3: Trip Duration Analysis - How do trip duration and distance vary by time of day?
 
+**NOTE**: For this question, the analysis is only done for the Green and Yellow Taxi because the FHV dataset doesn't include Trip Duration fields. 
+
+
 
 
 
