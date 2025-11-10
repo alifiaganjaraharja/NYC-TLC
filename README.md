@@ -46,7 +46,7 @@ The most popular routes for For-Hire Vehicles are characterized by a strong conn
 
 - **Green Taxi**
 
-See the result table [here](
+See the result table [here](https://github.com/alifiaganjaraharja/NYC-TLC/blob/main/visualizations/%5BNYC%5D-PopularRoutes-GreenTaxi.pdf)
 
 The most popular green taxi routes are dominated by two major trip types: intra-zone trips (trips starting and ending in the same neighborhood) and trips involving LaGuardia Airport (LGA).
 
