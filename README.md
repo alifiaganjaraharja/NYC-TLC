@@ -65,7 +65,9 @@ Question 3: Trip Duration Analysis - How do trip duration and distance vary by t
 See the full visualization of the line chart of Green Taxi [here](https://github.com/alifiaganjaraharja/NYC-TLC/blob/main/visualizations/%5BNYC%5D-TripDuration-GreenTaxi.pdf)
 
 
+- **Yellow Taxi**
 
+See the full visualization of the line chart of Yellow Taxi [here](https://github.com/alifiaganjaraharja/NYC-TLC/blob/main/visualizations/%5BNYC%5D-TripDuration-YellowTaxi.pdf)
 
 
 
