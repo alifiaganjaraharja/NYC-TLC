@@ -67,6 +67,7 @@ See the full visualization of the line chart of Green Taxi [here](https://github
 The data show a distinct pattern, where trip distance peaks in the early morning commute, while duration remains relatively stable, suggesting faster travel times for longer trips. 
 
 **Trip Efficiency Analysis (The Congestion Effect)**
+
 Comparing the two columns reveals a crucial insight about traffic and efficiency:
 1. **High Efficiency (4 AM - 8 AM)**: The trips are very long (up to 13,8 miles), but the average duration only slightly increases (~19 - 20 minutes). This indicates that the longest trips of the day occur when there is very little congestion, resulting in high-speed travel.
 2. **Low Efficiency (3 PM - 5 PM)**: Distances are relatively short (~5.9 - 7.4 miles), but the duration remains relatively high (~19 - 22 minutes). This suggests that trips are moving slowly due to heavy afternoon/evening traffic congestion.
