@@ -76,7 +76,13 @@ Comparing the two columns reveals a crucial insight about traffic and efficiency
 
 See the full visualization of the line chart of Yellow Taxi [here](https://github.com/alifiaganjaraharja/NYC-TLC/blob/main/visualizations/%5BNYC%5D-TripDuration-YellowTaxi.pdf)
 
+The  data reveals a classic pattern of Manhattan-centric congestion and usage, where trip time is maximized during the afternoon/evening rush hour, even though distances aren't the longest. 
 
+**Trip Efficiency Analysis (The Congestion Effect)**
+
+The most important insight comes from comparing the duration and distance at different times:
+1. **Highest Efficiency (5 AM - 6 AM)**: At 5 AM (hour 5), the average duration is 13.3 minutes for a distance of 11.9 miles. And the longest trips of the day are taken in the shortest amount of time, clearly showing that trips are completed at high speed with virtually zero congestion.
+2. **Lowest Efficiency (3 PM - 4 PM)**: At 3 PM (hour 15), the average duration is 26.2 minutes for a distance of 6.4 miles. And this result is an incredibly slow average speed, indicating maximum gridlock. The trips are long in time but only moderately long in distance.
 
 
 
