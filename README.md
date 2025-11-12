@@ -84,7 +84,22 @@ The most important insight comes from comparing the duration and distance at dif
 1. **Highest Efficiency (5 AM - 6 AM)**: At 5 AM (hour 5), the average duration is 13.3 minutes for a distance of 11.9 miles. And the longest trips of the day are taken in the shortest amount of time, clearly showing that trips are completed at high speed with virtually zero congestion.
 2. **Lowest Efficiency (3 PM - 4 PM)**: At 3 PM (hour 15), the average duration is 26.2 minutes for a distance of 6.4 miles. And this result is an incredibly slow average speed, indicating maximum gridlock. The trips are long in time but only moderately long in distance.
 
+Question 4: Tipping Behavior - Is there a correlation between the payment type (Cash vs. Credit Card) and tip amount?
 
+**NOTE**: For this question, the analysis is only done for the Green and Yellow Taxi because the FHV dataset doesn't include the Tip Amount field. 
 
+- **Green Taxi**
+
+See the full visualization of the line chart of Green Taxi [here](https://github.com/alifiaganjaraharja/NYC-TLC/blob/main/visualizations/%5BNYC%5D-TippingBehavior-GreenType.pdf)
+
+Key Comparative Insights for the Green Taxi Fleet
+1. **Payment Preference**: Unlike Yellow Taxis, where digital payments had a higher trip count, Green Taxis see a slightly higher volume of cash trips (35.2M) than digital trips (32.1M).
+2. **Highest Fare**: The Digital Average Fare ($13.92) for Green Taxis is notably higher than the Digital Average Fare for Yellow Taxis ($13.01), suggesting that the high-value Green Taxi trips are among the most expensive in the combined system. 
+
+- **Yellow Taxi**
+
+See the full visualization of the line chart of Green Taxi [here](https://github.com/alifiaganjaraharja/NYC-TLC/blob/main/visualizations/%5BNYC%5D-TippingBehavior-YellowTaxi.pdf)
+
+The data proves that digital payment (Type 1) is the driver of recorded revenue and higher-value trips for Yellow Taxis. Any financial analysis or policy decision relying solely on recorded transaction values must account for the 23% tipping premium on digital payments and the missing tip revenue from cash transactions.
 
 
