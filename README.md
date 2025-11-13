@@ -108,4 +108,12 @@ Question 5: Delivery Efficiency - Calculate the average time between a driver dr
 
 See the full visualization of the horizontal bar chart of FHV [here](https://github.com/alifiaganjaraharja/NYC-TLC/blob/main/visualizations/%5BNYC%5D-DeliverEfficiency-FHV.pdf)
 
+**Interpretation: Hyper-Efficiency**
+This data represents the Top 20 Most Efficient For-Hire Vehicle (FHV) Dispatching Bases based on the average time a driver spends waiting between dropping off one passenger and picking up the next from a total of around 765 drivers.
+
+The striking feature of this result is the extremely low values for the average time between rides, which indicate **hyper-efficiency** for these dispatching bases.
+
+The values are tightly clustered, ranging from 0.02 minutes to 0.17 minutes. This small range demonstrates that the top 20 bases are not just lucky; they have a systematic operational advantage that keeps their drivers on the road and earning with minimal idle time. 
+
+This result confirms that these dispatching bases are the absolute leaders in fleet efficiency within the FHV market.
 
