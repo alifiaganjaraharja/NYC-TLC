@@ -106,6 +106,6 @@ Question 5: Delivery Efficiency - Calculate the average time between a driver dr
 
 **NOTE**: For this question, the analysis is only done for the FHV (specifically the 2017) because either the Green and/or Yellow Taxi dataset doesn't include the 'dispatching_base_num' field or any driver info field. 
 
-
+See the full visualization of the horizontal bar chart of FHV [here](https://github.com/alifiaganjaraharja/NYC-TLC/blob/main/visualizations/%5BNYC%5D-DeliverEfficiency-FHV.pdf)
 
 
