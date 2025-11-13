@@ -102,4 +102,10 @@ See the full visualization of the line chart of Green Taxi [here](https://github
 
 The data proves that digital payment (Type 1) is the driver of recorded revenue and higher-value trips for Yellow Taxis. Any financial analysis or policy decision relying solely on recorded transaction values must account for the 23% tipping premium on digital payments and the missing tip revenue from cash transactions.
 
+Question 5: Delivery Efficiency - Calculate the average time between a driver dropping off a passenger and picking up the next one. This one can be a great use for $LEAD()$ window function.
+
+**NOTE**: For this question, the analysis is only done for the FHV (specifically the 2017) because either the Green and/or Yellow Taxi dataset doesn't include the 'dispatching_base_num' field or any driver info field. 
+
+
+
 
