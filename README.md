@@ -1,42 +1,112 @@
 # NYC Taxi & Limousine Commission (TLC) Trip Analysis
 **Author:** Alifia Ganjaraharja  
-**Tools Used:** Google BigQuery (SQL), Looker  
-**Dataset:** NYC TLC Public Dataset (Google BigQuery)
+**Tools Used:** Google BigQuery (SQL) and Looker  
+**Dataset:** NYC TLC Public Dataset [Google BigQuery](https://console.cloud.google.com/marketplace/product/city-of-new-york/nyc-tlc-trips?hl=de&project=nyc-taxi-trip-475207)
 
 ---
 
-This repository contains a data analysis project that utilizes SQL to examine taxi trip patterns to understand demand, pricing, and efficiency. This project utilizes a real public dataset recorded by the NYC Taxi & Limousine Commission (TLC), which is available on Google BigQuery.
+## 📌 Project Overview
+This repository contains a data analysis project examining taxi trip patterns in New York City to understand demand, pricing, and efficiency. The project utilizes a multi-year public dataset recorded by the NYC Taxi & Limousine Commission (TLC) available on Google BigQuery. 
 
-## Project Overview:
-This project utilizes a real public dataset from the NYC Taxi & Limousine Commission (TLC). It's ideal for practicing advanced SQL, including window functions and performance optimization on large datasets.
-1. **Goals**: analyze taxi trip patterns to understand demand, pricing, and efficiency.
+It serves as an exploration of advanced SQL techniques—including window functions (`LEAD()`) and performance optimization across high-volume datasets—paired with data visualization to uncover urban mobility patterns.
 
-   **Sample Questions to Answer**:
-   - Busiest Hours - What are the busiest hours of the day for taxi pickup? How does this change between weekdays and weekends?
-   - Popular Routes - What are the top 10 most common pick-up and drop-off location combinations?
-   - Trip Duration Analysis - How do trip duration and distance vary by time of day?
-   - Tipping Behavior - Is there a correlation between the payment type (Cash vs. Credit Card) and tip amount?
-   - Delivery Efficiency - Calculate the average time between a driver dropping off a passenger and picking up the next one. This one can be a great use for $LEAD()$ window function.
-  
-2. **Dataset**: The NYC Taxi & Limousine Commission (TLC) Trip record data is available as a public dataset on [Google BigQuery](https://console.cloud.google.com/marketplace/product/city-of-new-york/nyc-tlc-trips?hl=de&project=nyc-taxi-trip-475207). You can query it directly in the BigQuery console with a free account.
+### 📅 Dataset Coverage
+* **Yellow Taxi:** 2011 – 2023  
+* **Green Taxi:** 2014 – 2023  
+* **For-Hire Vehicles (FHV):** 2017 *(Selected multi-year records depending on field availability)*
 
-3. **Tools Used**: BigQuery and Looker
+### Key Questions
+1. **Busiest Hours:** What are the busiest hours of the day for taxi pickup, and how does this shift between weekdays and weekends?
+2. **Popular Routes:** What are the top 10 most common pickup and drop-off location combinations across vehicle fleets?
+3. **Trip Duration Analysis:** How do trip duration and distance vary by time of day, and what does this reveal about traffic congestion?
+4. **Tipping Behavior:** Is there a correlation between payment type (Cash vs. Credit Card) and tip amount?
+5. **Driver Turnaround Efficiency:** What is the average time between a driver dropping off a passenger and picking up the next one?
+
+---
+
+## Results & Findings
+
+### Question 1: Busiest Hours
+> 🔗 **Visualizations:** [Yellow Taxi Pickup Demand Chart](https://github.com/alifiaganjaraharja/NYC-TLC/blob/main/visualizations/%5BNYC%5D-BusiestHours-YellowTaxi.pdf) | [Green Taxi Pickup Demand Chart](https://github.com/alifiaganjaraharja/NYC-TLC/blob/main/visualizations/%5BNYC%5D-BusiestHours-GreenTaxi.pdf)
+
+The pattern of demand shifts significantly between weekdays and weekends across both fleets (evaluated across **Yellow Taxi: 2011–2023** and **Green Taxi: 2014–2023**):
+
+* **Yellow Taxi (2011–2023):**
+  * **Weekday Peak:** Dominated by the evening commute/dinner period (**6 PM – 8 PM**) with **72,575,146 total pickups**, reflecting standard work-commute patterns.
+  * **Weekend Peak:** Shifts to **Midnight (Hour 0)** with **25,554,686 total pickups**, driven by nightlife activity. Late evening hours (6 PM – 7 PM) remain busy, but peak volume moves later.
+* **Green Taxi (2014–2023):**
+  * **Weekday Peak:** Concentrated entirely in the evening commute (**5 PM – 7 PM**, peaking at 6 PM with **3,990,528 pickups**).
+  * **Weekend Peak:** Shifts to **Midnight (Hour 0)** with **1,611,417 pickups**, with high sustained volume throughout late evening hours (6 PM – 7 PM).
+
+---
+
+### Question 2: Popular Routes
+> 🔗 **Data Tables:** [FHV Route Summary](LINK_HERE) | [Green Taxi Route Summary](LINK_HERE) | [Yellow Taxi Route Summary](LINK_HERE)
+
+> **Dataset Limitation Note:** For For-Hire Vehicles (FHV), analysis is restricted to **2017 data** because subsequent years lack drop-off location IDs. Results are based on 107.9M trips (56% of total 2017 FHV records) containing complete location data. Green Taxi covers **2014–2023** and Yellow Taxi covers **2011–2023**.
+
+* **For-Hire Vehicles (FHV - 2017):** Routes are characterized by strong airport connections (JFK/LGA) and frequent intra-neighborhood trips (starting and ending in the same zone). Demand is split between high-volume, long-distance airport transit and high-frequency, short-distance trips within outer boroughs.
+* **Green Taxi (2014–2023):** Dominated by two major patterns: intra-zone local trips within non-Manhattan neighborhoods and connecting routes to LaGuardia Airport (LGA).
+* **Yellow Taxi (2011–2023):** Overwhelmingly dominated by trips within and between Midtown and Downtown Manhattan business districts, alongside key connections to the Upper East and Upper West Sides. Serves primarily high-density commuter corridors in core Manhattan.
+
+---
+
+### Question 3: Trip Duration & Traffic Congestion
+> 🔗 **Visualizations:** [Green Taxi Duration vs Distance](LINK_HERE) | [Yellow Taxi Duration vs Distance](LINK_HERE)
+
+> **Dataset Limitation Note:** Evaluated for Green Taxi (2014–2023) and Yellow Taxi (2011–2023). Excludes FHV fleet as the dataset lacks duration fields.
+
+**The Congestion Effect:**
+* **High-Efficiency Window (4 AM – 8 AM):** Average distances reach daily highs (up to **13.8 miles** for Green, **11.9 miles** at 5 AM for Yellow), while trip duration remains short (**13.3 to 20 mins**). Low traffic allows high-speed travel.
+* **Low-Efficiency Window (3 PM – 5 PM):** Distances drop significantly (**5.9 – 7.4 miles**), yet durations peak (**19 – 26.2 mins**). Yellow Taxis hit their slowest average speeds at 3 PM (averaging **6.4 miles in 26.2 minutes**), illustrating severe afternoon gridlock.
+
+---
+
+### Question 4: Tipping Behavior & Payment Type
+> 🔗 **Visualizations:** [Green Taxi Tipping Patterns](LINK_HERE) | [Yellow Taxi Tipping Patterns](LINK_HERE)
+
+> **Dataset Limitation Note:** Evaluated for Green Taxi (2014–2023) and Yellow Taxi (2011–2023). Excludes FHV fleet as the dataset lacks tip amount fields. Note that cash tips are unrecorded in official TLC log systems.
+
+* **Green Taxi (2014–2023):** Unlike Yellow Taxis (where digital payments dominate), Green Taxis record slightly higher cash trip volume (**35.2M cash** vs. **32.1M digital**). However, the Digital Average Fare (**$13.92**) is notably higher than Yellow Taxi digital fares (**$13.01**).
+* **Yellow Taxi (2011–2023):** Digital payments (Credit Card) drive higher recorded revenues and capture an average **23% tipping premium** compared to cash transactions (which record $0 tips in official system logs).
+
+---
+
+### Question 5: Driver Turnaround Efficiency
+> 🔗 **Visualizations:** [FHV Top Dispatching Bases Chart](LINK_HERE)
+
+> **Dataset Limitation Note:** Evaluated using **2017 FHV data**, as Green and Yellow Taxi logs do not record `dispatching_base_num` or driver-specific identifiers.
+
+Using `LEAD()` window functions to measure the idle time between a driver dropping off a passenger and picking up the next across ~765 drivers:
+
+* **Hyper-Efficiency:** The top 20 most efficient FHV dispatching bases exhibit wait times tightly clustered between **0.02 minutes (1.2 seconds)** and **0.17 minutes (10.2 seconds)**.
+* **Operational Insight:** These low values point to systematic dispatching advantages, likely driven by pre-scheduled app bookings or automated matching algorithms that minimize driver idle time between trips.
+
+---
+
+## 🛠️ SQL Implementation Example
+
+```sql
+-- Example: Calculating idle time between trips using LEAD() (2017 FHV Dataset)
+SELECT 
+  dispatching_base_num,
+  driver_id,
+  pickup_datetime,
+  dropoff_datetime,
+  TIMESTAMP_DIFF(
+    LEAD(pickup_datetime) OVER (PARTITION BY driver_id ORDER BY pickup_datetime),
+    dropoff_datetime,
+    SECOND
+  ) / 60.0 AS idle_time_minutes
+FROM 
+  `bigquery-public-data.new_york_taxi_trips.tlc_fhv_trips_2017`
+WHERE 
+  driver_id IS NOT NULL;
+
+
+
 
 ## Result and Findings
-
-Question 1: Busiest Hours - What are the busiest hours of the day for taxi pickup? How does this change between weekdays and weekends?
-
-See the full visualization of the line chart of Yellow Taxi [Here](https://github.com/alifiaganjaraharja/NYC-TLC/blob/main/visualizations/%5BNYC%5D-BusiestHours-YellowTaxi.pdf)
-
-The pattern of demand shifts significantly:
-- **Weekdays** are dominated by the Evening Commute/Dinner time (6 PM - 8 PM) with 72,575,146 total pickups, reflecting the typical rush of people leaving work and heading out.
-- **Weekends** show a peak at Midnight (hour 0) with 25,554,686 total pickups, suggesting a stronger demand from Late Night/Nightlife activity. The weekday evening rush hours (6 PM - 7 PM) remain busy, but the overall highest volume shifts later into the night/early morning on weekends.
-
-See the full visualization of the line chart of Green Taxi [here](https://github.com/alifiaganjaraharja/NYC-TLC/blob/main/visualizations/%5BNYC%5D-BusiestHours-GreenTaxi.pdf)
-
-The overall change in pattern for green taxis is consistent with the yellow taxi data, showing a clear shift from the commuting rush to nightlife demand:
-- **Weekday Peak** concentrated entirely in the Evening Commute period (5 PM TO 7 PM, with 6 PM being the busiest with 3,990,528 total pickups).
-- **Weekend Peak** Shifts to Midnight (hour 0) with 1,611,417 total pickups, with the late evening hours (6 PM and 7 PM) still maintaining high volume. The peak time itself moves later to capture people leaving social venues.
 
 Question 2: Popular Routes - What are the top 10 most common pick-up and drop-off location combinations?
 
