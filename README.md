@@ -1,5 +1,9 @@
-# [TLC] - NYC Taxi Trip Analysis
-By Alifia Ganjaraharja
+# NYC Taxi & Limousine Commission (TLC) Trip Analysis
+**Author:** Alifia Ganjaraharja  
+**Tools Used:** Google BigQuery (SQL), Looker  
+**Dataset:** NYC TLC Public Dataset (Google BigQuery)
+
+---
 
 This repository contains a data analysis project that utilizes SQL to examine taxi trip patterns to understand demand, pricing, and efficiency. This project utilizes a real public dataset recorded by the NYC Taxi & Limousine Commission (TLC), which is available on Google BigQuery.
 
